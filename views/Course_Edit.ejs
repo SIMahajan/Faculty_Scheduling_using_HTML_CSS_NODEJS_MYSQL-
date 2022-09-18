@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Admin Course Edit
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="main" style="min-height: 200vh;">
+        <nav class="navbar navbar-expand-lg navbar-light   " style="background-color: rgb(241, 32, 32); ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-time"></span>
+                    <h3><i class='fas fa-user-clock'></i> Scheduling </h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/"><i class='fas fa-home '></i>
+                                Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/Course"><i
+                                    class='fas fa-book-reader'></i> Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/Student_View"><i
+                                    class='fa fa-users'></i> Student</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/Faculty_View"><i
+                                    class='fa fa-street-view'></i> Faculty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/Calendar"><i class='fa fa-calendar'></i> Calendar</a>
+                        </li>
+                    <li class="nav-item" style="margin-left: 500px;">
+                            <a class="nav-link active" aria-current="page" href="/">Logout <i
+                                    class="fa-solid fa-right-from-bracket"></i></a>
+                        </li>
+                    </ul>
+                    <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <form action="/C_update" method="post">
+                <input type="hidden" value="<%= user.id %>" name="id">
+                <div class="card" style="color: black; padding-bottom: 50px; margin-top: 30px;">
+                    <div class="card-header" style="background-color: rgb(58, 94, 212); color:rgb(255, 255, 255)">
+                        <h3>Cource Edit</h3>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Course Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter Course Name" pattern="[a-zA-Z]+" name="course"
+                            value="<%= user.course %>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control" placeholder="Enter Description" name="description"
+                            value="<%= user.description %>" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

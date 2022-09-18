@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Faculty Form
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="main" style="min-height: 200vh;">
+        <nav class="navbar navbar-expand-lg navbar-light   " style="background-color: rgb(241, 32, 32); ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-time"></span>
+                    <h3><i class='fas fa-user-clock'></i> Scheduling </h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/"><i class='fas fa-home '></i>
+                                Home</a>
+                        </li>
+
+                        <li class="nav-item" style="margin-left: 850px;">
+                            <a class="nav-link active" aria-current="page" href="/">Log in <i
+                                    class="fa-solid fa-right-from-bracket"></i></a>
+                        </li>
+                    </ul>
+                    <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+                </div>
+            </div>
+        </nav>
+        <!-- Faculty Form  -->
+        <div class="container">
+            <form action="/Faculty_Add" method="post" >
+                <div class="card" style="color: black; padding-bottom: 50px; margin-top: 30px;">
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                    <a class="btn btn-primary btn-lg btn-block" href="/Faculty">Faculty Ragistration</a>
+                    </div>
+                    <div class="col-md-6">
+                    <a class="btn btn-primary btn-lg btn-block" href="/Student">Student Ragistration</a>
+                    </div>
+                    </div>
+                    <div class="card-header">
+                        <h3>Faculty Ragistration</h3>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class="control-label">First Name</label>
+                            <input type="text" name="firstname" class="form-control" pattern="[a-zA-Z]+"  placeholder="Sagar" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">Middle Name</label>
+                            <input type="text" name="middlename" class="form-control" pattern="[a-zA-Z]+"  placeholder="Ishwar" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">Last Name</label>
+                            <input type="text" name="lastname" class="form-control"pattern="[a-zA-Z]+"  placeholder="Mahajan" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label class="control-label">Contact</label>
+                            <input type="text" name="contact" class="form-control" pattern="[0-9]{10}"  placeholder="1234567890" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">Gender</label>
+                            <select name="gender" required="" class="custom-select" id="">
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                       
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="control-label">Address</label>
+                            <textarea name="address" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="row from-growp">
+                        <div class="col-md-6">
+                            <label class="control-label">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="sagar@gmail.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">Password</label>
+                            <input type="text" name="password" class="form-control" placeholder="inter only Number" pattern="[0-9]{8}" required>
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <button type="submit" class="btn btn-sm btn-primary col-sm-3 offset-md-6">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

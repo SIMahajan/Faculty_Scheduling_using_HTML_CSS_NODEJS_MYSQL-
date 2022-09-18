@@ -1,0 +1,20 @@
+{
+  "name": "faculty-shaduling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Sagar Mahajan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "date-format-lite": "^17.7.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "mysql": "^2.18.1",
+    "xss-filters": "^1.2.7"
+  }
+}
